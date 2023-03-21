@@ -115,3 +115,58 @@ const swiper1 = new Swiper('.swiper1', {
         }
       }
   });
+
+ // Swiper-third FeedBack block
+  const swiper3 = new Swiper('.swiper3', {
+    
+    direction: 'horizontal',
+    loop: false,
+
+    navigation: {
+      prevEl: '.swiper-button-prev3',
+      nextEl: '.swiper-button-next3',
+    },
+
+    pagination: {
+        el: '.swiper-pagination3',
+        type: 'bullets',
+        clickable: true,
+      },
+
+      effect: 'slide',
+      
+      breakpoints: {
+      
+        280: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            slideToClickedSlide: true,
+        },
+        
+        700: {
+        
+            slidesPerView: 2,
+            spaceBetween: 20,
+            slideToClickedSlide: true,
+        },
+        
+        1225: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            slideToClickedSlide: true,
+        }
+      }
+  });
+
+
+// Spoilers
+const sections = document.querySelectorAll("details");
+sections.forEach((section) => section.addEventListener('toggle', toggleAcordeon));
+
+function toggleAcordeon() {
+  this.open && sections.forEach((section) => {
+    if (section !== this && section.open) {
+      section.open = false;
+    }
+  });
+}

@@ -45,6 +45,7 @@ h1, h2 {font-family: 'Raleway';font-weight: 400;}
 h1 {font-size: 30px;line-height: 44px;}
 h2 {font-size: 25px;}
 h3 {font-family: 'Raleway';font-weight: 600;font-size: 17px;}
+h4 {font-family: 'Raleway';font-weight: 600;font-size: 18px;}
 p, a {font-family: 'Open Sans';font-weight: 400;font-size: 13px;line-height: 23px;}
 
 /*-BUTTON STYlES-*/
@@ -216,10 +217,130 @@ p, a {font-family: 'Open Sans';font-weight: 400;font-size: 13px;line-height: 23p
     align-items: flex-start;
 }
 
+/*--FEEDBACK-REVIEW BLOCK + SWIPER3--*/ 
 
+.review__container { 
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.review__slides {
+    height: 100%;
+}
+.reviewer { 
+    height: 100%;
+    background: #FFFFFF;
+}
+.reviewer__header { 
+    display: flex;
+    align-items: center;
+    margin: 55px 0px 30px 55px;
+}
+.reviewer__header__icon {
+    width: 60px;
+    height: 60px;
+}
+.reviewer__header__wrapper { 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px 0px 14px;
+}
+.reviewer__header__wrapper > h4 {
+    margin-bottom: 7px; 
 
+}
+.reviewer__link1,
+.reviewer__link2 {
+    display: flex;
+    align-items: center;
+}
+.reviewer__link1::before {
+    content: url('img/instagramRev.png');
+    display: inline-block;
+    margin-right: 9px;
+    width: 21px;
+    height: 21px;
+}
+.reviewer__link2::before {
+    content: url('img/Vector.png');
+    display: inline-block;
+    margin-right: 9px;
+    width: 21px;
+    height: auto;
+}
 
+.reviewer__body1 { 
+    margin: 0px 55px 5%;
+}
+.reviewer__body2 { 
+    margin: 0px 55px 5%;
+}
+.swiper3 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
 
+.navigation__feedback {
+    display:flex;
+    align-items: center;
+    align-self: flex-end;
+    margin-top: 50px;
+}
+.swiper-pagination3 {
+    margin:0px 20px;
+}
+.btnSWsize {
+    width: 25px;
+}
+
+/*---------SPOILER---------*/
+
+.FAQ__container {
+    display:flex;
+    align-items: center; 
+}
+
+.FAQ__spoilers__wrapper {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+}
+
+.FAQ__spoilers__image {
+    position: relative;
+    left: 60%;
+    top: 0;
+}
+
+details {
+    display:flex;
+    background: #FFFFFF;
+    list-style-type: none; 
+    justify-content:space-between;
+    margin-bottom: 7px;
+    z-index: 10;
+}
+
+summary {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none; 
+}
+
+summary:after {
+    content: url('img/cross2.png');
+    align-self:flex-end;
+}
+
+details[open] summary:after {
+    content: url('img/cross.png');
+}
 
 /*--------------------------------------
 ---------------MOBILE------------------
@@ -228,7 +349,18 @@ p, a {font-family: 'Open Sans';font-weight: 400;font-size: 13px;line-height: 23p
 
     body._lock { overflow: hidden; }
     .wrapper { padding: 0px 15px 45px; }
-
+    
+    .callback__number {
+        font-family: 'Raleway';
+        font-weight: 600;
+        font-size: 17px;
+    }
+    .callback__email {
+        font-family: 'Raleway';
+        font-weight: 500;
+        font-size: 17px;
+    }
+    
 /*------HEADER MOBILE------*/    
     
     .header__logo__icon { 
@@ -375,7 +507,7 @@ p, a {font-family: 'Open Sans';font-weight: 400;font-size: 13px;line-height: 23p
     .about__body__block { 
         margin-bottom: 30px;
         max-width: 400px;
-        margin-right:  60px;
+        margin-right: 20px;
     }
 
     .body__block__icon__container { 
@@ -390,8 +522,17 @@ p, a {font-family: 'Open Sans';font-weight: 400;font-size: 13px;line-height: 23p
         width: 45px;
     }
 
-/*---CATALOG BLOCK MOBILE---*/    
+/*---CATALOG BLOCK MOBILE---*/
 
+    .catalog__instagram__btn {
+        justify-content: flex-start;
+        max-width: 146px;
+    }
+    .catalog__instagram__btn > p {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+    }
     .catalog__price {
         padding: 20px 15px;
         font-size: 16px;
@@ -399,14 +540,13 @@ p, a {font-family: 'Open Sans';font-weight: 400;font-size: 13px;line-height: 23p
     .catalog__description {
         padding: 20px 15px;
     }
-    .catalog__description > h3 {
-        font-size: 16px;
-    }
+
     .catalog__description > p {
         font-size: 12px;
     }
 
 /*---ORDER BLOCK MOBILE---*/
+
     .order__container {
         margin-top: 55px;
     }
@@ -492,7 +632,110 @@ p, a {font-family: 'Open Sans';font-weight: 400;font-size: 13px;line-height: 23p
     .consultation__header > h2 { 
         margin-bottom: 12px;
     }  
+/*---FEEDBACK-REVIEW MOBILE---*/ 
+
+    .feedback__title {
+        margin-bottom: 20px;
+    }
+    .reviewer__header { 
+        margin: 20px 0px 15px 15px;
+    }
+    .reviewer__header__icon {
+        width: 55px;
+        height: 55px;
+    }
+    .reviewer__header__wrapper { 
+        margin: 5px 0px 0px 15px;
+    }
+    .reviewer__header__wrapper > h4 {
+        margin-bottom: 5px; 
+    }
+
+    .reviewer__link1::before {
+        content: url('img/instagramRev.png');
+        display: inline-block;
+        margin-right: 9px;
+        width: 18px;
+        height: 18px;
+    }
+    .reviewer__link2::before {
+        content: url('img/Vector.png');
+        display: inline-block;
+        margin-right: 9px;
+        width: 18px;
+        height: auto;
+    }
+
+    .reviewer__body1,
+    .reviewer__body2 { 
+        margin: 0px 15px 5%;
+    }
+
+    .swiper3 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
     
+    .navigation__feedback {
+        margin-top: 20px;
+    }
+    .btnSWsize {
+        display: flex;
+        width: 25px;
+    }
+
+/*---SPOILER BLOCK MOBILE---*/
+
+    .FAQ__container {
+       display: flex;
+       width: 100%;
+    }
+    .FAQ__spoilers__wrapper {
+        width: 100%;
+    }
+    .FAQ__spoilers__title {
+        margin-bottom: 20px;
+    }
+    .FAQ__icon__desk {
+        display:none;
+    }
+
+    summary:after {
+        content: url('img/plusMin.png');
+        align-self:flex-end;
+    }
+    details[open] summary:after {
+        content: url('img/crossMin.png');
+    }
+
+    .spoiler__header {
+        margin: 20px 20px 20px 15px;
+    }
+    .spoiler__body {
+        margin: 12px 15px 20px;
+    }
+
+/*---CONTACTS BLOCK MOBILE---*/
+    
+    .contacts__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 45px;
+    }
+    
+    .contacts__description > h4 {
+        font-size: 13px;
+        margin: 20px 0px 5px;
+    }
+    .contacts__map {
+        max-width: 100%;
+        margin: 30px 0px 45px;
+    }
+
 /*---FOOTER MOBILE---*/ 
 
     .footer__logo__icon { 
@@ -536,6 +779,7 @@ p, a {font-family: 'Open Sans';font-weight: 400;font-size: 13px;line-height: 23p
     h1 {font-size:56px;line-height: 75px;}
     h2 {font-size:45px;}
     h3 {font-size:24px;}
+    h4 {font-size:20px;}
     p, a {font-size:16px;line-height: 31px;}
     button {font-size:18px;}
 
@@ -543,7 +787,11 @@ p, a {font-family: 'Open Sans';font-weight: 400;font-size: 13px;line-height: 23p
     .footNote > a, 
     .changeColorFootNote {font-size: 13px;}
 
-
+    .callback__number,
+    .callback__email {
+        font-family: 'Raleway';
+        font-size: 24px;
+    }
 /*---HEADER DESK---*/
 
     .header__container {
@@ -734,9 +982,6 @@ p, a {font-family: 'Open Sans';font-weight: 400;font-size: 13px;line-height: 23p
     .catalog__description {
         padding: 25px 30px;
     }
-    .catalog__description > h3 {
-        font-size: 20px;
-    }
  
 /*---ORDER BLOCK DESK---*/
 
@@ -784,9 +1029,11 @@ p, a {font-family: 'Open Sans';font-weight: 400;font-size: 13px;line-height: 23p
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 160px 0px;
+        margin: 260px 0px;
     }
-    .whywe__icon {display: none;}
+    .whywe__icon {
+        display: none;
+    }
     .whywe__icon__desk {
         position: absolute;
         left: 0;
@@ -823,7 +1070,68 @@ p, a {font-family: 'Open Sans';font-weight: 400;font-size: 13px;line-height: 23p
     .consultation__header > h2 { 
         margin-bottom: 30px;
     }  
+/*---FEEDBACK BLOCK DESK---*/
     
+    .feedback__title {
+        margin-bottom: 40px;
+    }
+    .swiper-pagination-bullet,
+    .swiper-pagination-bullet-active {
+        width: 10px !important;
+        height: 10px !important;
+    }
+    .btnSWsize {
+        width: 45px;
+    }
+
+/*---SPOILERS BLOCK DESKTOP---*/
+
+    .FAQ__container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 160px 0px;
+    }
+    .FAQ__spoilers__wrapper {
+        display:flex; 
+        height: 100%;
+        margin: 10% 0%;
+    }
+    .FAQ__spoilers__title {
+        margin-bottom: 40px;
+    }
+    .FAQ__icon__desk {
+        position: absolute;
+        right: 0;
+    }
+    .spoiler__header {
+        margin: 50px 55px 50px;
+    }
+    .spoiler__body {
+        margin: 30px 55px 45px;
+    }
+
+/*---CONTACTS BLOCK DESKTOP---*/
+
+    .contacts__wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .contacts__header {
+        margin-bottom: 26px;
+    }
+    .contacts__description > h4 {
+        font-size: 20px;
+        margin: 30px 0px 14px;
+    } 
+
+    .contacts__map {
+        max-width: 100%;
+        margin:30px 0px 45px 50px;
+    }    
 
 /*---FOOTER DESK---*/
 
