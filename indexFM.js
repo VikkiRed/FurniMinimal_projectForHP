@@ -134,7 +134,7 @@ const swiper1 = new Swiper('.swiper1', {
       },
 
       effect: 'slide',
-      
+
       breakpoints: {
       
         280: {
